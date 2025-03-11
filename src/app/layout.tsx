@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from './providers';
@@ -7,6 +7,15 @@ const inter = Inter({
 	variable: '--font-inter',
 	subsets: ['latin'],
 });
+
+export const viewport: Viewport = {
+	initialScale: 1,
+	themeColor: [
+		{ color: 'var(--background)', media: '(prefers-color-scheme: light)' },
+		{ color: 'var(--background)', media: '(prefers-color-scheme: dark)' },
+	],
+	width: 'device-width',
+};
 
 export const metadata: Metadata = {
 	title: 'santi',
