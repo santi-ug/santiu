@@ -1,12 +1,23 @@
-const config = {
-	darkMode: 'class',
-	theme: {
-		extend: {},
-	},
-	variants: {
-		extend: {},
-	},
-	plugins: [],
-};
+import colors from 'tailwindcss/colors';
 
-export default config;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+		'./app/**/*.{js,ts,jsx,tsx}',
+		'!./node_modules',
+	],
+	darkMode: 'class',
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
+	plugins: [import('@tailwindcss/typography')],
+	theme: {
+		extend: {
+			colors: {
+				gray: colors.neutral,
+			},
+		},
+	},
+};

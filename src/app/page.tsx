@@ -1,120 +1,95 @@
 import ThemeSwitcher from 'components/ThemeSwitcher';
 import Image from 'next/image';
 
+// export default function Home() {
+// 	return (
+// 		<div className='grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
+// 			<main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
+// 				<div className='flex gap-4 items-center'>
+// 					<Image
+// 						className='dark:invert'
+// 						src='/next.svg'
+// 						alt='Next.js logo'
+// 						width={38}
+// 						height={38}
+// 						priority
+// 					/>
+// 					<div>
+// 						<h1 className='text-primary'>Santiago Uribe</h1>
+// 						<h3 className='text-quaternary'>Software Engineer</h3>
+// 					</div>
+// 				</div>
+
+// 				<div className='flex flex-col gap-4'>
+// 					<h2 className='text-tertiary'>Links</h2>
+// 					<div>
+// 						{/* x, github, figma, email, cv */}
+// 						<ThemeSwitcher />
+// 					</div>
+// 				</div>
+// 			</main>
+// 		</div>
+// 	);
+// }
+
 export default function Home() {
 	return (
-		<div className='grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-			<main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-				<div className='flex gap-4 items-center'>
-					<Image
-						className='dark:invert'
-						src='/next.svg'
-						alt='Next.js logo'
-						width={38}
-						height={38}
-						priority
-					/>
-					<div>
-						<h1 className='text-black dark:text-white'>Santiago Uribe</h1>
-						<h3 className='text-gray-300 dark:text-gray-600'>
-							Software Engineer
-						</h3>
-					</div>
+		<div className='mx-auto flex max-w-2xl flex-col gap-16 px-8'>
+			<Header />
+			<Contact />
+		</div>
+	);
+}
+
+function Header() {
+	return (
+		<header className='flex flex-row items-center gap-4'>
+			<div className='relative h-12 w-12'>
+				<Image
+					alt='pfp'
+					className='rounded-full'
+					layout='fill'
+					objectFit='contain'
+					src='https://robohash.org/PMV.png?set=set4'
+				/>
+
+				<div className='absolute -bottom-2 -right-2 rounded-full bg-[var(--background)] px-1 py-0.5 text-sm transition-colors duration-300'>
+					✨
 				</div>
-
-				<div>
-					<h2>Links</h2>
-					<div>
-						{/* x, github, figma, email, cv */}
-						<ThemeSwitcher />
-					</div>
+			</div>
+			<div className='flex '>
+				<div className='flex flex-col'>
+					<h1 className='text-primary'>Santiago Uribe Gil</h1>
+					<h2 className='text-quaternary'>Software Engineer</h2>
 				</div>
+				<div className='mt-1.25 ml-2'>
+					<ThemeSwitcher />
+				</div>
+			</div>
+		</header>
+	);
+}
 
-				<ol className='list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
-					<li className='mb-2'>
-						Get started by editing{' '}
-						<code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
-							src/app/page.tsx
-						</code>
-						.
-					</li>
-					<li>Save and see your changes instantly.</li>
-				</ol>
-
-				<div className='flex gap-4 items-center flex-col sm:flex-row'>
-					<a
-						className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-						href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Image
-							className='dark:invert'
-							src='/vercel.svg'
-							alt='Vercel logomark'
-							width={20}
-							height={20}
-						/>
-						Deploy now
+function Contact() {
+	return (
+		<div className='flex flex-col gap-4'>
+			<h1 className='text-tertiary'>Links</h1>
+			<div className='flex items-center gap-12'>
+				<div className='flex gap-8'>
+					<a href='' className='flex gap-2 items-center'>
+						<Image src='/github.svg' alt='GitHub logo' width={24} height={24} />
 					</a>
-					<a
-						className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-						href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Read our docs
+					<a href='' className='flex gap-2 items-center'>
+						<Image src='/figma.svg' alt='Figma logo' width={24} height={24} />
+					</a>
+					<a href='' className='flex gap-2 items-center'>
+						<Image src='/email.svg' alt='Email logo' width={24} height={24} />
+					</a>
+					<a href='' className='flex gap-2 items-center'>
+						<Image src='/cv.svg' alt='CV logo' width={24} height={24} />
 					</a>
 				</div>
-			</main>
-
-			<footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-				<a
-					className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-					href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					<Image
-						aria-hidden
-						src='/file.svg'
-						alt='File icon'
-						width={16}
-						height={16}
-					/>
-					Learn
-				</a>
-				<a
-					className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-					href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					<Image
-						aria-hidden
-						src='/window.svg'
-						alt='Window icon'
-						width={16}
-						height={16}
-					/>
-					Examples
-				</a>
-				<a
-					className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-					href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					<Image
-						aria-hidden
-						src='/globe.svg'
-						alt='Globe icon'
-						width={16}
-						height={16}
-					/>
-					Go to nextjs.org →
-				</a>
-			</footer>
+			</div>
 		</div>
 	);
 }
