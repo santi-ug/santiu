@@ -1,3 +1,4 @@
+import AnimateEnter from 'components/AnimateEnter';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -32,7 +33,9 @@ export default function RootLayout({
 			<body
 				className={`${inter} h-full min-h-screen relative w-full my-4 sm:my-24 motion-reduce:transform-none motion-reduce:transition-none antialiased`}
 			>
-				<Providers>{children}</Providers>
+				<Providers>
+					<AnimateEnter>{children}</AnimateEnter>
+				</Providers>
 			</body>
 		</html>
 	);
