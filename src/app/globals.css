@@ -7,7 +7,7 @@
 		--foreground-rgb: 23, 23, 23;
 	}
 
-	.dark {
+	[data-theme='dark'] {
 		--background: #171717;
 		--foreground: #ededed;
 		--foreground-rgb: 237, 237, 237;
@@ -20,6 +20,7 @@
 		transition: background-color 0.3s ease-in-out;
 		min-height: 100vh;
 		min-height: -webkit-fill-available; /* Fix for iOS Safari */
+		will-change: background-color;
 	}
 
 	* {

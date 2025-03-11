@@ -62,7 +62,7 @@ function Header() {
 					<h1 className='text-primary'>Santiago Uribe Gil</h1>
 					<h2 className='text-quaternary'>Software Engineer</h2>
 				</div>
-				<div className='mt-1.25 ml-2'>
+				<div className='mt-0.5 ml-2'>
 					<ThemeSwitcher />
 				</div>
 			</div>

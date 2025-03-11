@@ -9,9 +9,16 @@ export default function ThemeSwitcher() {
 	const [mounted, setMounted] = useState(false);
 	const { setTheme, resolvedTheme } = useTheme();
 
-	useEffect(() => setMounted(true), []);
+	// Ensure theme is set correctly and force an instant background update
+	useEffect(() => {
+		setMounted(true);
+		if (resolvedTheme) {
+			document.documentElement.setAttribute('data-theme', resolvedTheme);
+		}
+	}, [resolvedTheme]);
 
-	if (!mounted)
+	if (!mounted) {
+		// Prevent hydration mismatch by rendering a placeholder before mounting
 		return (
 			<Image
 				src='/images/sun.svg'
@@ -20,24 +27,17 @@ export default function ThemeSwitcher() {
 				alt='Loading Light/Dark Toggle'
 				priority={false}
 				title='Loading Light/Dark Toggle'
-			></Image>
-		);
-
-	if (resolvedTheme === 'dark') {
-		return (
-			<FiSun
-				className='cursor-pointer transition-transform duration-200 hover:scale-110'
-				onClick={() => setTheme('light')}
 			/>
 		);
 	}
 
-	if (resolvedTheme === 'light') {
-		return (
-			<FiMoon
-				className='cursor-pointer transition-transform duration-200 hover:scale-110'
-				onClick={() => setTheme('dark')}
-			/>
-		);
-	}
+	return (
+		<button
+			onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+			aria-label='Toggle Dark Mode'
+			className='rounded-full transition-transform duration-200 hover:scale-110'
+		>
+			{resolvedTheme === 'dark' ? <FiSun /> : <FiMoon />}
+		</button>
+	);
 }
