@@ -15,6 +15,11 @@
 
 	html {
 		@apply max-h-screen antialiased;
+		background: var(--background);
+		color: var(--foreground);
+		transition: background-color 0.3s ease-in-out;
+		min-height: 100vh;
+		min-height: -webkit-fill-available; /* Fix for iOS Safari */
 	}
 
 	* {
@@ -23,8 +28,8 @@
 
 	body {
 		@apply font-sans transition-colors duration-300 m-0 p-0;
-		background: var(--background);
-		color: var(--foreground);
+		min-height: 100vh;
+		min-height: -webkit-fill-available; /* Fix for iOS Safari */
 	}
 
 	pre::-webkit-scrollbar {
