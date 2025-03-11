@@ -1,5 +1,7 @@
+import ContactLink from 'components/ContactLink';
 import ThemeSwitcher from 'components/ThemeSwitcher';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // export default function Home() {
 // 	return (
@@ -73,22 +75,14 @@ function Header() {
 function Contact() {
 	return (
 		<div className='flex flex-col gap-4'>
-			<h1 className='text-tertiary'>Links</h1>
+			<h1 className='text-secondary'>Links</h1>
 			<div className='flex items-center gap-12'>
-				<div className='flex gap-8'>
-					<a href='' className='flex gap-2 items-center'>
-						<Image src='/github.svg' alt='GitHub logo' width={24} height={24} />
-					</a>
-					<a href='' className='flex gap-2 items-center'>
-						<Image src='/figma.svg' alt='Figma logo' width={24} height={24} />
-					</a>
-					<a href='' className='flex gap-2 items-center'>
-						<Image src='/email.svg' alt='Email logo' width={24} height={24} />
-					</a>
-					<a href='' className='flex gap-2 items-center'>
-						<Image src='/cv.svg' alt='CV logo' width={24} height={24} />
-					</a>
-				</div>
+				<ContactLink href='https://github.com/santi-ug' title='Github' />
+				<ContactLink
+					href='https://www.linkedin.com/in/santiuribeg'
+					title='Linkedin'
+				/>
+				<ContactLink email='santi.uribegil@gmail.com' title='Email' />
 			</div>
 		</div>
 	);
