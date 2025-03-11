@@ -1,7 +1,6 @@
 import ContactLink from 'components/ContactLink';
 import ThemeSwitcher from 'components/ThemeSwitcher';
 import Image from 'next/image';
-import Link from 'next/link';
 
 // export default function Home() {
 // 	return (
