@@ -15,6 +15,7 @@
 
 	html {
 		@apply max-h-screen antialiased;
+		font-family: var(--font-inter), sans-serif !important; /* Apply Inter globally */
 		background: var(--background);
 		color: var(--foreground);
 		transition: background-color 0.3s ease-in-out;
@@ -25,12 +26,14 @@
 
 	* {
 		box-sizing: border-box;
+		font-family: var(--font-inter), sans-serif !important; /* Ensure Inter is applied */
 	}
 
 	body {
-		@apply font-sans transition-colors duration-300 m-0 p-0;
+		@apply transition-colors duration-300 m-0 p-0;
 		min-height: 100vh;
 		min-height: -webkit-fill-available; /* Fix for iOS Safari */
+		font-family: var(--font-inter), sans-serif !important; /* Apply Inter globally */
 	}
 
 	pre::-webkit-scrollbar {

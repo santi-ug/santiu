@@ -1,0 +1,31 @@
+import Image from 'next/image';
+import ThemeSwitcher from './ThemeSwitcher';
+
+export default function Header() {
+	return (
+		<header className='flex flex-row items-center gap-4'>
+			<div className='relative h-12 w-12'>
+				<Image
+					alt='pfp'
+					className='rounded-full'
+					layout='fill'
+					objectFit='contain'
+					src='https://robohash.org/PMV.png?set=set4'
+				/>
+
+				<div className='absolute -bottom-2 -right-2 rounded-full bg-[var(--background)] px-1 py-0.5 text-sm transition-colors duration-300'>
+					✨
+				</div>
+			</div>
+			<div className='flex '>
+				<div className='flex flex-col'>
+					<h1 className='text-primary'>Santiago Uribe Gil</h1>
+					<h2 className='text-quaternary'>Software Engineer</h2>
+				</div>
+				<div className='mt-0.5 ml-2'>
+					<ThemeSwitcher />
+				</div>
+			</div>
+		</header>
+	);
+}

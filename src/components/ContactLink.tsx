@@ -22,7 +22,7 @@ export default function ContactLink({
 		<span className='block items-center gap-4'>
 			{href && (
 				<a
-					className='text-quaternary hover:text-primary transition-opacity duration-150'
+					className='text-secondary hover:text-primary transition-opacity duration-150'
 					href={href}
 					rel='noopener noreferrer'
 					target='_blank'
@@ -46,7 +46,7 @@ export default function ContactLink({
 			)}
 			{email && (
 				<a
-					className='text-quaternary hover:text-primary transition-opacity duration-150'
+					className='text-secondary hover:text-primary transition-opacity duration-150'
 					href={`mailto:${email}`}
 					rel='noopener noreferrer'
 					target='_blank'

@@ -5,8 +5,10 @@ import './globals.css';
 import { Providers } from './providers';
 
 const inter = Inter({
-	variable: '--font-inter',
-	subsets: ['latin'],
+	variable: '--font-inter', // Defines a CSS variable for the font
+	subsets: ['latin', 'latin-ext'],
+	weight: ['400', '500', '600'], // Choose specific weights
+	display: 'swap', // Prevents FOIT (Flash of Invisible Text)
 });
 
 export const viewport: Viewport = {
@@ -31,7 +33,7 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body
-				className={`${inter} h-full min-h-screen relative w-full my-4 sm:my-24 motion-reduce:transform-none motion-reduce:transition-none antialiased`}
+				className={`${inter.variable} h-full min-h-screen relative w-full my-4 sm:my-24 motion-reduce:transform-none motion-reduce:transition-none  antialiased`}
 			>
 				<Providers>
 					<AnimateEnter>{children}</AnimateEnter>
