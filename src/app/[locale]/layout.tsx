@@ -1,6 +1,9 @@
 import AnimateEnter from 'components/AnimateEnter';
 import type { Metadata, Viewport } from 'next';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { routing } from '../../i18n/routing';
 import './globals.css';
 import { Providers } from './providers';
 
@@ -25,19 +28,29 @@ export const metadata: Metadata = {
 	description: 'Santiago Uribes Portfolio',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
+	params,
 }: Readonly<{
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }>) {
+	const { locale } = await params;
+
+	if (!hasLocale(routing.locales, locale)) {
+		notFound();
+	}
+
 	return (
-		<html lang='en' suppressHydrationWarning>
+		<html lang={locale} suppressHydrationWarning>
 			<body
 				className={`${inter.variable} h-full min-h-screen relative w-full my-4 sm:my-24 motion-reduce:transform-none motion-reduce:transition-none  antialiased`}
 			>
-				<Providers>
-					<AnimateEnter>{children}</AnimateEnter>
-				</Providers>
+				<NextIntlClientProvider>
+					<Providers>
+						<AnimateEnter>{children}</AnimateEnter>
+					</Providers>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
