@@ -1,5 +1,15 @@
 {
 	"Header": {
 		"profession": "Software Engineer"
+	},
+	"Links": {
+		"title": "Links",
+		"Github": "GitHub",
+		"Linkedin": "Linkedin",
+		"Email": "Email"
+	},
+	"About": {
+		"title": "About Me",
+		"content": "I am a software engineer with a passion for web development. I have experience in developing web applications using technologies such as HTML, CSS, JavaScript, and PHP. I am also familiar with frameworks such as React, Angular, and Laravel."
 	}
 }

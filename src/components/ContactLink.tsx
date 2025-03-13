@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import type React from 'react';
 
 export default function ContactLink({
@@ -11,6 +12,8 @@ export default function ContactLink({
 	href?: string;
 	title: string;
 }) {
+	const t = useTranslations('Links');
+
 	const handleClick = (e: React.MouseEvent) => {
 		if (email) {
 			e.preventDefault();
@@ -27,7 +30,7 @@ export default function ContactLink({
 					rel='noopener noreferrer'
 					target='_blank'
 				>
-					{title}{' '}
+					{t(title)}{' '}
 					<svg
 						className=' inline-block h-3 w-3'
 						fill='none'
@@ -52,7 +55,7 @@ export default function ContactLink({
 					target='_blank'
 					onClick={email ? handleClick : undefined} // Only add event handler for `mailto:`
 				>
-					{title}{' '}
+					{t(title)}{' '}
 					<svg
 						className=' inline-block h-3 w-3'
 						fill='none'

@@ -1,5 +1,15 @@
 {
 	"Header": {
 		"profession": "Ingeniero de Software"
+	},
+	"Links": {
+		"title": "Enlaces",
+		"Github": "GitHub",
+		"Linkedin": "Linkedin",
+		"Email": "Correo Electrónico"
+	},
+	"About": {
+		"title": "Acerca de mí",
+		"content": "Soy un ingeniero de software con pasión por el desarrollo web. Tengo experiencia en el desarrollo de aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript y PHP. También estoy familiarizado con frameworks como React, Angular y Laravel."
 	}
 }

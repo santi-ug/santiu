@@ -1,8 +1,12 @@
+import clsx from 'clsx';
 import ContactLink from 'components/ContactLink';
 import Header from 'components/Header';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export default function Home() {
+	const t = useTranslations();
+
 	return (
 		<div className='mx-auto flex max-w-2xl flex-col gap-16 px-8'>
 			<Header />
@@ -14,10 +18,18 @@ export default function Home() {
 }
 
 function Contact() {
+	const t = useTranslations();
+
 	return (
 		<div className='flex flex-col gap-4'>
-			<h1 className='text-tertiary'>Links</h1>
-			<div className='flex items-center gap-12'>
+			<h1 className='text-tertiary'>{t('Links.title')}</h1>
+			<div
+				className={clsx(
+					'flex flex-col gap-4',
+					'sm:flex sm:flex-col sm:gap-4',
+					'md:flex md:flex-row md:items-center md:gap-12'
+				)}
+			>
 				<ContactLink href='https://github.com/santi-ug' title='Github' />
 				<ContactLink
 					href='https://www.linkedin.com/in/santiuribeg'

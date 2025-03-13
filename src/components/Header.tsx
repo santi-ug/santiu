@@ -4,7 +4,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
-	const t = useTranslations();
+	const t = useTranslations('Header');
 
 	return (
 		<header className='flex flex-row items-center gap-4'>
@@ -24,7 +24,7 @@ export default function Header() {
 			<div className='flex flex-row justify-between w-full'>
 				<div className='flex flex-col'>
 					<h1 className='text-primary'>Santiago Uribe Gil</h1>
-					<h2 className='text-quaternary'>{t('Header.profession')}</h2>
+					<h2 className='text-quaternary'>{t('profession')}</h2>
 				</div>
 				<div className='flex flex-col  items-center relative mr-7'>
 					<div className='flex flex-col absolute gap-1 items-center '>
