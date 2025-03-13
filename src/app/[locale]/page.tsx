@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export default function Home() {
-	const t = useTranslations();
+	// const t = useTranslations();
 
 	return (
 		<div className='mx-auto flex max-w-2xl flex-col gap-16 px-8'>
