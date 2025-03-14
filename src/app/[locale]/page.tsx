@@ -29,6 +29,7 @@ function Contact() {
 					'md:flex md:flex-row md:items-center md:gap-12'
 				)}
 			>
+				<ContactLink href='https://x.com/hate_santi' title='X' />
 				<ContactLink href='https://github.com/santi-ug' title='Github' />
 				<ContactLink
 					href='https://www.linkedin.com/in/santiuribeg'
