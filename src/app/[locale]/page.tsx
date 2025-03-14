@@ -24,8 +24,8 @@ function Contact() {
 			<h1 className='text-tertiary'>{t('Links.title')}</h1>
 			<div
 				className={clsx(
-					'flex flex-col gap-4',
-					'sm:flex sm:flex-col sm:gap-4',
+					'grid grid-cols-3 gap-4',
+					'sm:grid-cols-3 sm:gap-4',
 					'md:flex md:flex-row md:items-center md:gap-12'
 				)}
 			>
@@ -51,7 +51,7 @@ function About() {
 			<p className='text-primary'>{t('par1')}</p>
 			<p className='text-primary'>
 				{t('par2start')}{' '}
-				<Link className='underline' href={'/highlights'}>
+				<Link className='underline' href={'/projects'}>
 					{t('par2underlined')}
 				</Link>{' '}
 				{t('par2end')}

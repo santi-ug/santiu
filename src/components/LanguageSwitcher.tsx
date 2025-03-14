@@ -31,8 +31,8 @@ export default function LanguageSwitcher() {
 			className='relative flex items-center rounded-md transition hover:scale-105 cursor-pointer'
 			disabled={isPending}
 		>
-			<LanguageIcon className='w-6 h-6 fill-[var(--foreground)] text-secondary' />
-			<span className='absolute -right-3.5 transition-opacity text-xs font-medium'>
+			<LanguageIcon className='w-6 h-6 fill-[rgba(var(--foreground-rgb),0.4)]' />
+			<span className='absolute -right-3.5 transition-opacity text-xs font-medium text-quaternary'>
 				{nextLocale.toUpperCase()}
 			</span>
 		</button>

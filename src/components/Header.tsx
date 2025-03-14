@@ -26,14 +26,6 @@ export default function Header() {
 					<h1 className='text-primary'>Santiago Uribe Gil</h1>
 					<h2 className='text-quaternary'>{t('profession')}</h2>
 				</div>
-				<div className='flex flex-col  items-center relative mr-7'>
-					<div className='flex flex-col absolute gap-1 items-center '>
-						<div className='mr-4'>
-							<LanguageSwitcher />
-						</div>
-						<ThemeSwitcher />
-					</div>
-				</div>
 			</div>
 		</header>
 	);

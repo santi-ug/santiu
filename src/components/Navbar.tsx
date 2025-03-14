@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import LanguageSwitcher from './LanguageSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export function Navbar() {
 	const router = useRouter();
@@ -76,6 +78,12 @@ export function Navbar() {
 				>
 					[c] cv
 				</Link>
+			</div>
+			<div>
+				<div className='flex gap-8 mt-1 items-center '>
+					<LanguageSwitcher />
+					<ThemeSwitcher />
+				</div>
 			</div>
 		</nav>
 	);

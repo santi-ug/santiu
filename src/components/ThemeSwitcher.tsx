@@ -35,7 +35,7 @@ export default function ThemeSwitcher() {
 		<button
 			onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
 			aria-label='Toggle Dark Mode'
-			className='rounded-full transition-transform duration-200 hover:scale-110 cursor-pointer'
+			className='rounded-full text-tertiary transition-transform duration-200 hover:scale-110 cursor-pointer'
 		>
 			{resolvedTheme === 'dark' ? <FiMoon /> : <FiSun />}
 		</button>
