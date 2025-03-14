@@ -5,7 +5,10 @@ export default function page() {
 	return (
 		<div>
 			<GoBack />
-			<div>page</div>
+
+			<div className='flex items-center justify-between text-sm mx-auto max-w-2xl px-8'>
+				WORK IN PROGRESS
+			</div>
 		</div>
 	);
 }
