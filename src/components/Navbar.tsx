@@ -1,16 +1,20 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export function Navbar() {
 	const router = useRouter();
+	const pathname = usePathname(); // Get full pathname (e.g., "/en/cv")
 	const t = useTranslations('Navbar');
+
+	// Extract the page name (removes locale from the path)
+	const pathSegments = pathname.split('/');
+	const page = pathSegments.length > 2 ? `/${pathSegments[2]}` : '/';
 
 	useEffect(() => {
 		const handleKeyPress = (event: KeyboardEvent) => {
-			// Don't trigger if any input elements are focused or if event target is an input
 			if (
 				document.activeElement?.tagName === 'INPUT' ||
 				document.activeElement?.tagName === 'TEXTAREA' ||
@@ -41,21 +45,34 @@ export function Navbar() {
 			<div className='flex space-x-4'>
 				<Link
 					href='/'
-					className='text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)] transition-colors duration-200 hover:scale-102'
+					className={`transition-colors duration-200 hover:scale-102 ${
+						page === '/'
+							? 'text-[rgba(var(--foreground-rgb),1)] sm:text-[rgba(var(--foreground-rgb),0.4)] sm:hover:text-[rgba(var(--foreground-rgb),1)]'
+							: 'text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)]'
+					}`}
 				>
 					[h] home
 				</Link>
 
 				<Link
 					href='/projects'
-					className='text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)] transition-colors duration-200 hover:scale-102'
+					className={`transition-colors duration-200 hover:scale-102 ${
+						page === '/projects'
+							? 'text-[rgba(var(--foreground-rgb),1)] sm:text-[rgba(var(--foreground-rgb),0.4)] sm:hover:text-[rgba(var(--foreground-rgb),1)]'
+							: 'text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)]'
+					}`}
 				>
 					[p] {t('projects')}
 				</Link>
+
 				<Link
 					href='/cv'
 					prefetch={true}
-					className='text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)] transition-colors duration-200 hover:scale-102'
+					className={`transition-colors duration-200 hover:scale-102 ${
+						page === '/cv'
+							? 'text-[rgba(var(--foreground-rgb),1)] sm:text-[rgba(var(--foreground-rgb),0.4)] sm:hover:text-[rgba(var(--foreground-rgb),1)]'
+							: 'text-[rgba(var(--foreground-rgb),0.4)] hover:text-[rgba(var(--foreground-rgb),1)]'
+					}`}
 				>
 					[c] cv
 				</Link>
