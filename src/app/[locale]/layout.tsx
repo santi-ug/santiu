@@ -1,4 +1,5 @@
 import AnimateEnter from 'components/AnimateEnter';
+import Footer from 'components/Footer';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
@@ -48,7 +49,10 @@ export default async function RootLayout({
 			>
 				<NextIntlClientProvider>
 					<Providers>
-						<AnimateEnter>{children}</AnimateEnter>
+						<AnimateEnter>
+							{children}
+							<Footer />
+						</AnimateEnter>
 					</Providers>
 				</NextIntlClientProvider>
 			</body>
