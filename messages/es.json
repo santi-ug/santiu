@@ -1,15 +1,35 @@
 {
 	"Header": {
-		"profession": "Ingeniero de Software"
+		"profession": "Ingeniero de Sistemas"
 	},
 	"Links": {
 		"title": "Enlaces",
 		"Github": "GitHub",
 		"Linkedin": "Linkedin",
-		"Email": "Correo Electrónico"
+		"Email": "Correo Electrónico",
+		"CV": "CV"
 	},
 	"About": {
 		"title": "Acerca de mí",
-		"content": "Soy un ingeniero de software con pasión por el desarrollo web. Tengo experiencia en el desarrollo de aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript y PHP. También estoy familiarizado con frameworks como React, Angular y Laravel."
+		"par1": "Soy apasionado por convertir ideas en soluciones digitales perfectas, donde el código, el diseño y la innovación se unen perfectamente. Si no estoy programando, estaré en el gimnasio, tocando la guitarra o viendo anime.",
+		"par2start": "Mira mis",
+		"par2underlined": "destacados y proyectos",
+		"par2end": "para tener una mejor idea de mi trabajo.",
+		"par3": "Actualmente estudio Ingeniería de Sistemas. Aporto curiosidad, precisión y un enfoque detallista. ¡Envíame un mensaje y llevemos tu idea a la vida!"
+	},
+	"Experience": {
+		"title": "Experiencia",
+		"job1": {
+			"date": "2022 - Ahora",
+			"company": "Universidad Autónoma de Manizales",
+			"position": "Monitor",
+			"desc": "Ayudé a 100+ estudiantes en fundamentos de C++ y asesoré a 15+, mejorando el rendimiento de la clase como monitor."
+		},
+		"job2": {
+			"date": "2024 - 24",
+			"company": "Universidad Autónoma de Manizales",
+			"position": "Desarrollador Frontend",
+			"desc": "Implementé en PHP & Vue la gestión de certificados para 2000+ usuarios y diseñé interacciones backend con Clases y diagramas ER."
+		}
 	}
 }

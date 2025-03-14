@@ -6,10 +6,30 @@
 		"title": "Links",
 		"Github": "GitHub",
 		"Linkedin": "Linkedin",
-		"Email": "Email"
+		"Email": "Email",
+		"CV": "CV"
 	},
 	"About": {
 		"title": "About Me",
-		"content": "I am a software engineer with a passion for web development. I have experience in developing web applications using technologies such as HTML, CSS, JavaScript, and PHP. I am also familiar with frameworks such as React, Angular, and Laravel."
+		"par1": "I'm passionate about turning ideas into seamless digital solutions, where code, design, and innovation come together effortlessly. If I'm not coding, I'm probably at the gym, playing guitar, or watching anime.",
+		"par2start": "Check out my",
+		"par2underlined": "highlights and projects",
+		"par2end": "to get a better sense of my work.",
+		"par3": "Currently studying Software Engineering. I bring curiosity, precision, and a keen eye for detail, shoot me a message and let's bring your idea to life!"
+	},
+	"Experience": {
+		"title": "Experience",
+		"job1": {
+			"date": "2022 - Now",
+			"company": "Universidad Autónoma de Manizales",
+			"position": "Teacher Assistant",
+			"desc": "Helped 100+ engineering students grasp C++ fundamentals and mentored 15+ individually, improving class performance as a TA."
+		},
+		"job2": {
+			"date": "2024 - 24",
+			"company": "Universidad Autónoma de Manizales",
+			"position": "Frontend Developer",
+			"desc": "Built an acceptance feature in a PHP & Vue app for admins to grant certificates, improving event management for 2000+ users. Designed backend interactions using Classes & ER diagrams."
+		}
 	}
 }
