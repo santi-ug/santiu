@@ -1,4 +1,7 @@
 {
+	"Navbar": {
+		"projects": "projects"
+	},
 	"Header": {
 		"profession": "Software Engineer"
 	},

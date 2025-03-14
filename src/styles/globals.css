@@ -62,16 +62,28 @@
 	.text-primary {
 		color: var(--foreground);
 	}
+	.hover\:text-primary:hover {
+		color: var(--foreground);
+	}
 
 	.text-secondary {
+		color: rgba(var(--foreground-rgb), 0.8);
+	}
+	.hover\:text-secondary:hover {
 		color: rgba(var(--foreground-rgb), 0.8);
 	}
 
 	.text-tertiary {
 		color: rgba(var(--foreground-rgb), 0.6);
 	}
+	.hover\:text-tertiary:hover {
+		color: rgba(var(--foreground-rgb), 0.6);
+	}
 
 	.text-quaternary {
+		color: rgba(var(--foreground-rgb), 0.4);
+	}
+	.hover\:text-quaternary:hover {
 		color: rgba(var(--foreground-rgb), 0.4);
 	}
 

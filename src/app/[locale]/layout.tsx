@@ -1,5 +1,6 @@
 import AnimateEnter from 'components/AnimateEnter';
 import Footer from 'components/Footer';
+import { Navbar } from 'components/Navbar';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
@@ -50,6 +51,7 @@ export default async function RootLayout({
 				<NextIntlClientProvider>
 					<Providers>
 						<AnimateEnter>
+							<Navbar />
 							{children}
 							<Footer />
 						</AnimateEnter>

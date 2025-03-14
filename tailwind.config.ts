@@ -18,6 +18,7 @@ module.exports = {
 			colors: {
 				gray: colors.neutral,
 			},
+			textColor: ['hover'],
 		},
 	},
 };
