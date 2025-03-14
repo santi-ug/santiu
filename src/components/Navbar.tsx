@@ -80,7 +80,7 @@ export function Navbar() {
 				</Link>
 			</div>
 			<div>
-				<div className='flex gap-8 mt-1 items-center '>
+				<div className='flex gap-8 items-center '>
 					<LanguageSwitcher />
 					<ThemeSwitcher />
 				</div>
