@@ -1,7 +1,5 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import LanguageSwitcher from './LanguageSwitcher';
-import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
 	const t = useTranslations('Header');
