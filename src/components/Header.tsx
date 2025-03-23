@@ -10,8 +10,8 @@ export default function Header() {
 				<Image
 					alt='pfp'
 					className='rounded-full'
-					layout='fill'
-					objectFit='contain'
+					fill
+					sizes="48px"
 					src='https://robohash.org/PMV.png?set=set4'
 				/>
 

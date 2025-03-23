@@ -1,7 +1,6 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
@@ -20,14 +19,7 @@ export default function ThemeSwitcher() {
 	if (!mounted) {
 		// Prevent hydration mismatch by rendering a placeholder before mounting
 		return (
-			<Image
-				src='/images/sun.svg'
-				width={36}
-				height={36}
-				alt='Loading Light/Dark Toggle'
-				priority={false}
-				title='Loading Light/Dark Toggle'
-			/>
+			<FiSun size={17} className="text-quaternary" />
 		);
 	}
 
