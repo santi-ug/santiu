@@ -26,8 +26,28 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+	authors: [{ name: 'Santiago Uribe', url: 'https://santiu.co' }],
+	category: 'software',
+	creator: 'Santiago Uribe',
+	icons: {
+		icon: '/favicon.ico',
+	},
+	keywords: [
+		'Santiago', 'Uribe', 'Software', 'Portfolio',
+		'Next.js', 'React', 'JavaScript', 'TypeScript',
+		'TailwindCSS', 'CSS', 'HTML', 'Design',
+		'Engineering', 'Frontend', 'Backend', 'Full Stack',
+		'Developer', 'Software Engineer', 'Web Developer',
+		'Node.js', 'Express.js', 'NestJS', 'Python',
+		'Django', 'FastAPI', 'PostgreSQL', 'MongoDB',
+		'Redis', 'Docker', 'Kubernetes', 'AWS',
+		'CI/CD', 'Git', 'REST API', 'GraphQL',
+		'System Design', 'Cloud Computing', 'Microservices',
+		'Testing', 'Jest', 'Cypress', 'Web Development'
+	],
+	publisher: 'Santiago Uribe',
 	title: 'santi',
-	description: 'Santiago Uribes Portfolio',
+	description: 'Software Engineer',
 };
 
 export default async function RootLayout({

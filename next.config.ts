@@ -4,7 +4,16 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const nextConfig: NextConfig = {
 	/* config options here */
 	images: {
-		domains: ['via.placeholder.com', 'robohash.org'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'via.placeholder.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'robohash.org',
+			},
+		],
 	},
 };
 
